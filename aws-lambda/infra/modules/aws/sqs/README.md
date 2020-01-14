@@ -1,0 +1,1 @@
+Creates the AWS SQS with the default app settings and its Dead Letter Queue

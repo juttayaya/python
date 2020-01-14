@@ -3,12 +3,13 @@ variable "environment" {
   type        = string
 }
 
-variable "region" {
-  description = "The AWS region (e.g. us-east-1, us-west-2)"
-  type        = string
-}
-
 variable "project" {
   description = "The name of the project"
   type        = string
+}
+
+variable "message_retention_seconds" {
+  description = "The number of seconds Amazon SQS retains a message"
+  type        = number
+  default     = 86400
 }
