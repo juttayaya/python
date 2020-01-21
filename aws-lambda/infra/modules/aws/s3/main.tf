@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "project" {
-  bucket = "${var.project}-${var.region}"
+  bucket = local.s3_bucket_name
   acl    = "private"
   region = var.region
 
@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "project" {
   }
   
   tags = {
-    Name        = "${var.project}-${var.region}"
+    Name        = local.s3_bucket_name
     project     = var.project
     environment = var.environment
   }
