@@ -2,7 +2,7 @@
 # IAM
 ###
 resource "aws_iam_role" "lambda" {
-  name               = local.lambda_name
+  name               = local.lambda_iam_name
   description        = "Service Role for ${local.lambda_name}"
   path               = "/service-role/"
   assume_role_policy = <<EOF
@@ -22,7 +22,7 @@ EOF
 }
 
 resource "aws_iam_policy" "lambda" {
-  name        = local.lambda_name
+  name        = local.lambda_iam_name
   description = "IAM Policy for ${local.lambda_name}"
   policy = templatefile("${path.module}/lambda_iam_policy.tmpl",
     {

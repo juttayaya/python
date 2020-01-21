@@ -1,7 +1,8 @@
 terraform {
   required_version = "~> 0.12.19"
   required_providers {
-    aws = "~> 2.31"
+    aws     = "~> 2.31"
+    archive = "~> 1.3"
   }
 
   # The details of the S3 backend are defined in terragrunt.hcl
