@@ -21,5 +21,6 @@ inputs = {
   environment    = local.environment
   project        = local.project
   region         = "us-east-1"
-  aws_account_id = "XXXXXXXXXXX"
+  aws_account_id = "278946338358"
+  #aws_account_id = "XXXXXXXXXXX"
 }

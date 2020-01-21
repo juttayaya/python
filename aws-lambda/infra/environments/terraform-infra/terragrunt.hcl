@@ -25,6 +25,6 @@ inputs = {
 
 terraform {
   # Uncomment to use local filesystem terraform modules
-  source = " ../../../../../../../python//aws-lambda/infra/modules/terraform-infra"
-  #source = "git::git@github.com:juttayaya/python.git//aws-lambda/infra/modules/terraform-infra?ref=v1.0.0"
+  #source = " ../../../../../../../python//aws-lambda/infra/modules/terraform-infra"
+  source = "git::git@github.com:juttayaya/python.git//aws-lambda/infra/modules/terraform-infra?ref=v1.0.0"
 }

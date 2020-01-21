@@ -7,7 +7,7 @@ remote_state {
     bucket         = "${local.project}-tfstate"
     region         = "us-east-1"
     key            = "environments/${local.environment}/${path_relative_to_include()}/terraform.tfstate"
-    dynamodb_table = "jirawat-python-tflock"
+    dynamodb_table = "${local.project}-tflock"
   }
 }
 
@@ -18,7 +18,9 @@ locals {
 
 # Global variables
 inputs = {
-  environment = local.environment
-  project     = local.project
-  region      = "us-west-1"
+  environment    = local.environment
+  project        = local.project
+  region         = "us-west-1"
+  aws_account_id = "278946338358"
+  #aws_account_id = "XXXXXXXXXXX"
 }
